@@ -1,13 +1,11 @@
-*{
+* {
   margin: 0;
   padding: 0;
-  border:none;
+  border: none;
   box-sizing: border-box;
 }
 
-
 body {
-  display: flex;
-  place-items: center;
   min-height: 100vh;
+  background: rgb(234, 237, 237);
 }

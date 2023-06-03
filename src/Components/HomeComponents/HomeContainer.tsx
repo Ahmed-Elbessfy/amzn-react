@@ -1,11 +1,14 @@
-// import Header from "./Header";
+import { FC } from "react";
 import Header from "./Header";
+// import Products from "./Products";
+import Products from "./Products";
 
-const HomeContainer = () => {
+const HomeContainer: FC = () => {
   return (
-    <>
+    <div className="container">
       <Header />
-    </>
+      <Products />
+    </div>
   );
 };
 
