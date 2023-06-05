@@ -1,0 +1,102 @@
+nav {
+  background-color: #131921;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.navbar_home-link {
+  height: 3rem;
+  overflow: hidden;
+  position: relative;
+  width: 8rem;
+}
+
+.navbar_logo {
+  position: absolute;
+  top: -40px;
+  left: 0;
+}
+
+.navbar_search {
+  height: 100%;
+  display: flex;
+  flex: 1;
+}
+
+.navbar_search-input {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px 0 0 5px;
+  -webkit-border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
+  -ms-border-radius: 5px 0 0 5px;
+  -o-border-radius: 5px 0 0 5px;
+}
+.navbar_searchBtn {
+  background-color: #febd69;
+  height: 100%;
+  width: 4rem;
+  border-radius: 0 5px 5px 0;
+  -webkit-border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  -ms-border-radius: 0 5px 5px 0;
+  -o-border-radius: 0 5px 5px 0;
+}
+
+.navbar_options {
+  display: flex;
+  color: #fff;
+  justify-content: space-evenly;
+}
+
+.navbar_option {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 0.8rem;
+}
+
+.navbar_option .language {
+  color: #fff;
+  background: transparent;
+  font-size: 1.1rem;
+  padding: 5px;
+}
+
+.navbar_option .language option {
+  color: #fff;
+  background: #232f3e;
+}
+
+.navbar_option .l1 {
+  font-size: 75%;
+}
+
+.navbar_option .l2 {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.navbar_cart {
+  position: relative;
+  overflow: hidden;
+  width: 4rem;
+  height: 3.7rem;
+}
+
+.navbar_cart_img {
+  position: absolute;
+  bottom: -66px;
+  left: 4px;
+}
+
+.navbar_cart-count {
+  color: #f08804;
+  font-weight: bold;
+  position: absolute;
+  top: 4px;
+  left: 30px;
+  font-size: 1.2rem;
+}
