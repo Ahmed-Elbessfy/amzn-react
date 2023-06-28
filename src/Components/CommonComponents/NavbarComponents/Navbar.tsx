@@ -1,7 +1,7 @@
 import { FC } from "react";
 import "./Navbar.css";
 
-import NavbarLogo from "./HomeLogo";
+import NavbarLogo from "./NavbarLogo";
 import NavbarSearch from "./NavbarSearch";
 import NavbarOptions from "./NavbarOptions";
 
