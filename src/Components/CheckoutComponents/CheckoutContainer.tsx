@@ -1,5 +1,7 @@
 import { FC } from "react";
 
+import "./CheckoutContainer.css";
+
 import Navbar from "../CommonComponents/NavbarComponents/Navbar";
 import Subtotal from "./ Subtotal";
 import CheckoutProducts from "./CheckoutProducts";
