@@ -1,13 +1,14 @@
 import { FC } from "react";
-import Navbar from "../CommonComponents/NavbarComponents/Navbar";
 
+import Navbar from "../CommonComponents/NavbarComponents/Navbar";
 import Subtotal from "./ Subtotal";
+import CheckoutProducts from "./CheckoutProducts";
 const CheckoutContainer: FC = () => {
   return (
     <>
       <Navbar />
-      <div className="container">
-        Checkout Component
+      <div className="container checkout_container">
+        <CheckoutProducts />
         <Subtotal />
       </div>
     </>
