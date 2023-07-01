@@ -3,6 +3,9 @@ import { FC } from "react";
 import { RootState } from "store";
 import { useSelector } from "react-redux";
 
+import "./CheckoutProducts.css";
+
+import CheckoutProduct from "./CheckoutProduct";
 const CheckoutProducts: FC = () => {
   // get selected checkout products
   const selectedCheckoutProductsList = useSelector(
@@ -16,9 +19,14 @@ const CheckoutProducts: FC = () => {
       <div className="checkout_products">
         {selectedCheckoutProductsList.map((product) => {
           return (
-            <>
-              <p key={product.id}> {product.title}</p> <br />
-            </>
+            <CheckoutProduct
+              key={product.id}
+              id={product.id}
+              title={product.title}
+              price={product.price}
+              rating={product.rating}
+              imgSrc={product.imgSrc}
+            />
           );
         })}
       </div>
