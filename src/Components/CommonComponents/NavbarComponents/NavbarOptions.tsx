@@ -1,8 +1,15 @@
 import { FC } from "react";
+import { RootState } from "store";
+import { useSelector } from "react-redux";
+
 import { Link } from "react-router-dom";
 
 const navSprite = "./nav-sprite.png";
 const NavbarOptions: FC = () => {
+  const { checkoutProductsCount } = useSelector(
+    (state: RootState) => state.checkoutProductsReducer
+  );
+
   return (
     <div className="navbar_options">
       <div className="navbar_option">
@@ -23,9 +30,9 @@ const NavbarOptions: FC = () => {
       </div>
       <div className="navbar_option">
         <div className="navbar_cart">
-          <Link to="/checkout">
+          <Link to="/checkout" title="Checkout Products">
             <img src={navSprite} alt="Cart" className="navbar_cart_img" />
-            <span className="navbar_cart-count">0</span>
+            <span className="navbar_cart-count">{checkoutProductsCount}</span>
           </Link>
         </div>
       </div>
