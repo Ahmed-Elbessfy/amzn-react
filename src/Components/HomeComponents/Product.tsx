@@ -1,11 +1,26 @@
 import { FC } from "react";
+import { useDispatch } from "react-redux";
+import { addCheckoutProduct } from "../../store/CheckoutProductsSlice";
+
 import StarRateIcon from "@mui/icons-material/StarRate";
 
 import { IProduct } from "interfaces/productsInterfaces";
 
-const Product: FC<IProduct> = ({ title, price, rating, imgSrc }: IProduct) => {
+const Product: FC<IProduct> = ({
+  id,
+  title,
+  price,
+  rating,
+  imgSrc,
+}: IProduct) => {
   // creating rating array to display rating stars
   const stars = Array.from({ length: rating }, (_, index) => index + 1);
+
+  // add product to checkout products
+  const dispatch = useDispatch();
+  const add_product_to_checkout = () => {
+    dispatch(addCheckoutProduct({ id, title, price, rating, imgSrc }));
+  };
 
   return (
     <div className="product">
@@ -22,7 +37,9 @@ const Product: FC<IProduct> = ({ title, price, rating, imgSrc }: IProduct) => {
         </div>
       </div>
       <img src={imgSrc} alt={title} className="product_img" />
-      <button className="add_product">add to cart</button>
+      <button className="add_product" onClick={add_product_to_checkout}>
+        add to cart
+      </button>
     </div>
   );
 };
