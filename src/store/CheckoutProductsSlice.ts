@@ -23,11 +23,16 @@ const checkoutProductsSlice = createSlice({
       state.checkoutProductsList = [...state.checkoutProductsList, action.payload]
       state.checkoutProductsCount += 1
       state.checkoutProductsValue += parseFloat(action.payload.price)
+    }),
+    removeCheckoutProduct: ((state, action: PayloadAction<{checkId:number, price:string}>) => {
+      state.checkoutProductsList = [...state.checkoutProductsList.filter(product => product.checkId !== action.payload.checkId)]
+      state.checkoutProductsCount -= 1
+      state.checkoutProductsValue -= parseFloat(action.payload.price)
     })
   }
 })
 
 
-export const {addCheckoutProduct} = checkoutProductsSlice.actions
+export const {addCheckoutProduct, removeCheckoutProduct} = checkoutProductsSlice.actions
 
 export default checkoutProductsSlice.reducer

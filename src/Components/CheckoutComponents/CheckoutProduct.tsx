@@ -1,4 +1,6 @@
 import { FC } from "react";
+import { useDispatch } from "react-redux";
+import { removeCheckoutProduct } from "../../store/CheckoutProductsSlice";
 
 import StarRateIcon from "@mui/icons-material/StarRate";
 
@@ -15,6 +17,17 @@ const CheckoutProduct: FC<ICheckoutProduct> = ({
   // creating rating array to display rating stars
   const stars = Array.from({ length: rating }, (_, index) => index + 1);
 
+  const dispatch = useDispatch();
+
+  const deleteCheckoutProduct = () => {
+    dispatch(
+      removeCheckoutProduct({
+        checkId,
+        price
+      })
+    );
+  };
+
   return (
     <div className="checkout_product">
       <img src={imgSrc} alt={title} className="checkout_product_img" />
@@ -29,7 +42,12 @@ const CheckoutProduct: FC<ICheckoutProduct> = ({
             <StarRateIcon key={i} className="checkout_product_rating_star" />
           ))}
         </div>
-        <button className="remove_checkout_product">remove from cart</button>
+        <button
+          className="remove_checkout_product"
+          onClick={deleteCheckoutProduct}
+        >
+          remove from cart
+        </button>
       </div>
     </div>
   );
