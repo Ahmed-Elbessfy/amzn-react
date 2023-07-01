@@ -19,7 +19,16 @@ const Product: FC<IProduct> = ({
   // add product to checkout products
   const dispatch = useDispatch();
   const add_product_to_checkout = () => {
-    dispatch(addCheckoutProduct({ id, title, price, rating, imgSrc }));
+    dispatch(
+      addCheckoutProduct({
+        checkId: performance.now(),
+        id,
+        title,
+        price,
+        rating,
+        imgSrc,
+      })
+    );
   };
 
   return (

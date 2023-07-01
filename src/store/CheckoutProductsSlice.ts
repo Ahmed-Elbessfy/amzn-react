@@ -1,10 +1,10 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 
-import {IProduct} from "../interfaces/productsInterfaces"
+import {ICheckoutProduct} from "../interfaces/productsInterfaces"
 
 interface initCheckoutProductsSliceInterface {
-  checkoutProductsList: IProduct[],
+  checkoutProductsList: ICheckoutProduct[],
   checkoutProductsCount: number,
   checkoutProductsValue:number
 }
@@ -19,7 +19,7 @@ const checkoutProductsSlice = createSlice({
   name: "checkout-products",
   initialState: initState,
   reducers: {
-    addCheckoutProduct: ((state, action: PayloadAction<IProduct>) => {
+    addCheckoutProduct: ((state, action: PayloadAction<ICheckoutProduct>) => {
       state.checkoutProductsList = [...state.checkoutProductsList, action.payload]
       state.checkoutProductsCount += 1
       state.checkoutProductsValue += parseFloat(action.payload.price)

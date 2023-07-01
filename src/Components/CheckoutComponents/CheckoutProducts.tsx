@@ -20,7 +20,8 @@ const CheckoutProducts: FC = () => {
         {selectedCheckoutProductsList.map((product) => {
           return (
             <CheckoutProduct
-              key={product.id}
+              key={product.checkId}
+              checkId={product.checkId}
               id={product.id}
               title={product.title}
               price={product.price}

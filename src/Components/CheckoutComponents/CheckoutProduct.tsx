@@ -2,15 +2,16 @@ import { FC } from "react";
 
 import StarRateIcon from "@mui/icons-material/StarRate";
 
-import { IProduct } from "interfaces/productsInterfaces";
+import { ICheckoutProduct } from "interfaces/productsInterfaces";
 
-const CheckoutProduct: FC<IProduct> = ({
+const CheckoutProduct: FC<ICheckoutProduct> = ({
+  checkId,
   id,
   title,
   price,
   rating,
   imgSrc,
-}: IProduct) => {
+}: ICheckoutProduct) => {
   // creating rating array to display rating stars
   const stars = Array.from({ length: rating }, (_, index) => index + 1);
 
