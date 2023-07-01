@@ -1,4 +1,8 @@
 import { FC } from "react";
+
+import { RootState } from "store";
+import { useSelector } from "react-redux";
+
 import "./Subtotal.css";
 
 // To ignore react-currency-format module error
@@ -6,13 +10,17 @@ import "./Subtotal.css";
 import CurrencyFormat from "react-currency-format";
 
 const Subtotal: FC = () => {
+  const { checkoutProductsCount, checkoutProductsValue } = useSelector(
+    (state: RootState) => state.checkoutProductsReducer
+  );
+
   return (
     <div className="subtotal">
       <CurrencyFormat
         renderText={(value: number) => (
           <div>
             <p>
-              Checked 0 items: <strong>{value}</strong>
+              Checked {checkoutProductsCount} items: <strong>{value}</strong>
             </p>
             <small className="subtotal_gift">
               <input type="checkbox" /> This order contains a gift
@@ -20,7 +28,7 @@ const Subtotal: FC = () => {
           </div>
         )}
         decimalScale={2}
-        value={670990.4566}
+        value={checkoutProductsValue}
         displayType={"text"}
         thousandSeparator={true}
         prefix={"$"}
