@@ -4,6 +4,9 @@ nav {
   display: flex;
   align-items: center;
   padding: 1rem;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
 }
 
 .navbar_home-link {
