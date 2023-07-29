@@ -82,6 +82,11 @@ nav {
   text-transform: capitalize;
 }
 
+.navbar_option a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .navbar_cart {
   position: relative;
   overflow: hidden;

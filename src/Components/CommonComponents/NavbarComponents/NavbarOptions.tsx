@@ -21,8 +21,10 @@ const NavbarOptions: FC = () => {
         </select>
       </div>
       <div className="navbar_option">
-        <p className="l1">Hello, sign in</p>
-        <p className="l2">accounts &amp; lists</p>
+        <Link to="/login">
+          <p className="l1">Hello, sign in</p>
+          <p className="l2">accounts &amp; lists</p>
+        </Link>
       </div>
       <div className="navbar_option">
         <p className="l1">Returns</p>
