@@ -35,6 +35,13 @@ const SignUp = () => {
           </div>
           <input className="signup_btn" type="submit" value="Sign Up" />
         </form>
+
+        <p>
+          Have an Account?
+          <Link to="/login" className="signup_login_link">
+            Sign in
+          </Link>
+        </p>
       </div>
     </div>
   );
