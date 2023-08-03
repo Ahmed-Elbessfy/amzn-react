@@ -30,6 +30,12 @@ const Login = () => {
           Sale. Please see our Privacy Notice, Our Cookies Notice and our
           Interest Based Ads Notice
         </small>
+        <p>
+          Does not have an account?
+          <Link to="/sign_up" className="login_signup_link">
+            Join Us
+          </Link>
+        </p>
       </div>
     </div>
   );
