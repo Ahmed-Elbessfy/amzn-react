@@ -7,7 +7,7 @@ import "./Subtotal.css";
 
 // To ignore react-currency-format module error
 // @ts-ignore
-import CurrencyFormat from "react-currency-format";
+// import CurrencyFormat from "react-currency-format";
 
 const Subtotal: FC = () => {
   const { checkoutProductsCount, checkoutProductsValue } = useSelector(
@@ -16,7 +16,7 @@ const Subtotal: FC = () => {
 
   return (
     <div className="subtotal">
-      <CurrencyFormat
+      {/* <CurrencyFormat
         renderText={(value: number) => (
           <div>
             <p>
@@ -32,7 +32,7 @@ const Subtotal: FC = () => {
         displayType={"text"}
         thousandSeparator={true}
         prefix={"$"}
-      />
+      /> */}
 
       <button>Proceed to payment</button>
     </div>
